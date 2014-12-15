@@ -54,7 +54,8 @@ The following statement is used to load the data using `read.csv()`.
 **Note**: It is assumed that the file activity.csv is in the current working directory. File can be downloaded from [here](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip)
 
 ```{r read_data}
-rdata <- read.csv(unz("activity.zip", "activity.csv"))
+rdata <- read.csv('activity.csv', header = TRUE, sep = ",",
+                  colClasses=c("numeric", "character", "numeric"))
 ```
 
 ### tidy the data or preprocess the data
